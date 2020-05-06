@@ -1,0 +1,63 @@
+Enter your responses inline below and push this file to your private GitHub
+repository.
+
+
+1. Assume I plan to use the friend_overlap function above to quantify the
+similarity of two users. E.g., because 238 is larger than 1, I conclude that
+Jill Stein and Gary Johnson are more similar than Hillary Clinton and Donald
+Trump.
+
+How is this approach misleading? How might you fix it?
+
+Ans: 
+	This approach is misleading because all four candidate to do not follow same number of accounts. DrJillStein follow 1645 twitter accounts and GovGaryJohnson follows 3512 accounts. While HillaryClinton and realDonaldTrump follows 784 and 45 accounts respectively. So there is major difference in number accounts they follow. So if candidates' number of follows are more then probability of mutual friend is high and if candidates' number of follows are less then probability of mutual friend is low. And number of friends in real life and on twitter might be different. So number of friends is not good factor to measure similarity between candidates
+	To fix this problem, number of friends of candidates should approximately same so with analysis of data, we can find similarity. Or we can find another factor that are approximately similar between candidates.
+
+
+
+
+2. Looking at the output of your followed_by_hillary_and_donald function, why
+do you think this user is followed by both Hilary Clinton and Donald Trump,
+who are rivals? Do some web searches to see if you can find out more
+information.
+
+Ans: 
+	The output of the function followed_by_hillary_and_donald gives the name that Donald Trump and Hillary Clinton both follows. So there are two accounts 'whitehouse' and 'VP'. VP is the account of current Vice President of US. So president should follow Vice President and WhiteHouse is the Whitehouse. The power of president.
+
+
+
+
+3. There is a big difference in how many accounts each candidate follows (Gary
+Johnson follows over 3K accounts, while Donald Trump follows less than
+50). Why do you think this is? How might that affect our analysis?
+
+Ans: 
+	All these are 4 Presidential candidate fro 2016. Donald Trump and Hillary Clinton are major candidate. So they are already popular in public compared to other two. So minor candidate follows more people because they want to popular. If they follow more people then they increase their popularity.
+	This affect our analysis because if they all have approx same number of friends then we can calculate similarity between them. But here they have major difference in friends we can not find similarity with number of friends.
+
+
+
+
+4. The follower graph we've collected is incomplete. To expand it, we would
+have to also collect the list of accounts followed by each of the
+friends. That is, for each user X that Donald Trump follows, we would have to
+also collect all the users that X follows. Assuming we again use the API call
+https://dev.twitter.com/rest/reference/get/friends/ids, how many requests will
+we have to make? Given how Twitter does rate limiting
+(https://dev.twitter.com/rest/public/rate-limiting), approximately how many
+minutes will it take to collect this data?
+
+Ans: 
+	Number of Total request we have to make: 5990
+	Calculation:
+		For each candidates and their friends, we have to make a new twitter request.
+		So 4 candidates +  Total of their friends = number of requests.
+		So 4 + 1645+3512+784+45 = 5990 requests.
+	Total time it will take: 5970 minutes = 99hrs 30 minutes
+	Calculation:
+		(Assumption: time to get twitter response is negligible)
+		For every friends/ids request, only 15 request can be made in 15 minute time window.
+		So after every 15 requests, we have to wait for 15 minutes
+		so (total requests/ 15 requests) = 399 windows we need
+		after every window we need to wait 15 minutes.
+		so 399*15 = 5985 minutes - 15 minutes(because we don't have to wait after last 15 		request set) = 5970 minutes

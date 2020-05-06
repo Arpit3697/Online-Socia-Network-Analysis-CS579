@@ -1,0 +1,10 @@
+
+total users in network: 1640
+total tweets: 360
+total communities: 2
+users per community: 820.000000
+total positive, negative and combine tokens: 231 positive instances , 15 negative instances and 114 combine instances
+example of pos, neg, combine tokens: 
+positive:RT @ImRaina: Today, we celebrate one of the best decisions we ever made. Today, we celebrate love &amp; friendship. Today, we celebrate us. Tha…
+negative:@Colly622 @imVkohli @ashwinravi99 @RCBTweets @IPL @Colly622 the most ridiculous comment. Anyway, keep crying. Good only for that.
+combined:Team Chennai's captain @msdhoni and @ImRaina during the net practice session on the eve of their match against Team… https://t.co/2bnsAHJMyP

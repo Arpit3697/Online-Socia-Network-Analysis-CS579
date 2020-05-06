@@ -1,0 +1,17 @@
+1. Looking at the top errors printed by get_top_misclassified, name two ways you would modify your classifier to improve accuracy (it could be features, tokenization, or something else.)
+
+The two ways we could modify classifier to improve accuracy are:
+
+        
+1. First one is add more Postive and Negative Words, to create much better feature and capture more information
+.       
+2. We can remove Stopwords from the text and then processing it to convert it to features.
+
+
+
+
+
+2. Implement one of the above methods. How did it affect the results?
+
+I Implemented the first method(i.e adding more positive and Negative words). It improved the accuracy of the model from 0.77 to 0.79 and minimum frequency is 5. In second one accuracy is improved from 0.64 to 0.65 and I got minimum frequency 10.Top coefficient per class of negatavie and positive words are also changed.
+Testing accuracy changed from 0.73 to 0.75. I also included the positive(https://gist.github.com/mkulakowski2/4289437) and Negative words(https://gist.github.com/mkulakowski2/4289441) in form of text file and created a2_new.py demonstrating the change.
